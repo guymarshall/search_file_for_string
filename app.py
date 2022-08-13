@@ -4,8 +4,7 @@ filename = input("Enter filename: ")
 # prompt user for search_string
 search_string = input("Enter string to search for: ")
 # convert to open with syntax
-
-file = open("sample.txt", "r")
-for line in file:
-    if "searchstring" in line:
-        print(line)
+with open(filename, "r") as file:
+    for line in file:
+        if search_string in line:
+            print(line)
